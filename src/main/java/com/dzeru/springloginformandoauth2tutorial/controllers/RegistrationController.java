@@ -27,11 +27,11 @@ public class RegistrationController
 	}
 
 	@PostMapping("/registration")
-	public String addUser(String name, String email, String password)
+	public String addUser(String name, String username, String password)
 	{
 		User user = new User();
 		user.setName(name);
-		user.setUsername(email);
+		user.setUsername(username);
 		user.setPassword(passwordEncoder.encode(password));
 		user.setActive(true);
 		user.setRoles(Collections.singleton(Role.USER));
