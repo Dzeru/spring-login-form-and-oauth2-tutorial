@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:=http://www.w3.org/1999/xhtml>
+<head>
+	{{> meta}}
+	<title>Заметки</title>
+</head>
+<body>
+<section class="container">
+	{{#notes}}
+	<div class="mt-3">
+		<div>
+			<h2>{{title}}</h2>
+		</div>
+		<div>
+			{{note}}
+		</div>
+	</div>
+	{{/notes}}
+</section>
+{{^notes}}
+<section class="container">
+	Заметок пока нет
+</section>
+{{/notes}}
+</body>
+</html>
